@@ -2,7 +2,7 @@
 <div class="output">
     <div id="textOutput">{{textOutput}}</div>
     <div id="graphOutput" ></div>
-    <button @click='run(editor)'>运行</button>
+    <i icon="el-icon-caret-right" @click='run(editor)'></i>
 </div>
 </template>
 

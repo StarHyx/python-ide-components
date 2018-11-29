@@ -1,5 +1,6 @@
 <template>
   <div class="editor-container">
+    <ToolBar></ToolBar>
     <div
       class="editor"
       ref="editor"
@@ -7,8 +8,6 @@
     </div>
     <button @click='getEditor'>打印Editor信息</button>
     <OutputPanel :editor='editor'></OutputPanel>
-    <el-button icon="el-icon-search" circle></el-button>
-    <el-button type="primary" icon="el-icon-download">下载</el-button>
   </div>
 </template>
 
@@ -16,13 +15,18 @@
 /* eslint-disable */
 import * as monaco from 'monaco-editor'
 import OutputPanel from '../../OutputPanel/index.js'
+import ToolBar from '../../ToolBar/index.js'
 export default {
   name: "IdeEditor",
   components: {
     OutputPanel: OutputPanel,
+    ToolBar: ToolBar
   },
   props: {
-    value: String,
+    value: {
+      type: String,
+      default: ''
+    },
     theme: {
       type: String,
       default: 'vs'
@@ -38,7 +42,7 @@ export default {
     },
     height: {
       type: String,
-      default: '100px'
+      default: '200px'
     },
     showOutput: {
       type: Boolean,
@@ -154,5 +158,6 @@ export default {
 
 <style scoped>
 .editor-container {
+  margin-bottom: 200px;
 }
 </style>
