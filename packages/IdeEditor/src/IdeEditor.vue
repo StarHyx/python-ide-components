@@ -7,6 +7,8 @@
     </div>
     <button @click='getEditor'>打印Editor信息</button>
     <OutputPanel :editor='editor'></OutputPanel>
+    <el-button icon="el-icon-search" circle></el-button>
+    <el-button type="primary" icon="el-icon-download">下载</el-button>
   </div>
 </template>
 
@@ -152,6 +154,5 @@ export default {
 
 <style scoped>
 .editor-container {
-  display: flex
 }
 </style>
