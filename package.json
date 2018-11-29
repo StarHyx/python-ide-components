@@ -1,0 +1,56 @@
+{
+  "name": "tiny-python-ide",
+  "version": "0.1.0",
+  "description": "vue components for python online ide",
+  "main": "lib/tinyide.umd.min.js",
+  "repository": "https://github.com/StarHyx/python-ide-components",
+  "author": "starhyx",
+  "license": "MIT",
+  "keyword": "monaco-editor python ide vue",
+  "private": false,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "buildlib": "vue-cli-service build --target lib --name tinyide --dest lib packages/index.js"
+  },
+  "dependencies": {
+    "monaco-editor": "^0.15.6",
+    "vue": "^2.5.17"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.1",
+    "@vue/cli-plugin-eslint": "^3.0.1",
+    "@vue/cli-service": "^3.0.1",
+    "monaco-editor-webpack-plugin": "^1.7.0",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-console": "off"
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
