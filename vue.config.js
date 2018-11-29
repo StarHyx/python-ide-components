@@ -1,3 +1,5 @@
+const path = require('path')
+const MonacoWebpackPlugin = require("monaco-editor-webpack-plugin")
 module.exports = {
   // 修改 src 为 examples
   pages: {
@@ -14,13 +16,17 @@ module.exports = {
     config.module
       .rule('js')
       .include
-        .add('packages')
+        .add(path.resolve(__dirname, 'packages'))
         .end()
       .use('babel')
         .loader('babel-loader')
         .tap(options => {
           // 修改它的选项...
           return options
-        })
-  }
+       })
+  },
+  // 添加monaco-editor-webpack-plugin
+  configureWebpack: {
+    plugins: [new MonacoWebpackPlugin()]
+  },
 }
