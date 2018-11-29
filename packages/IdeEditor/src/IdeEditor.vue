@@ -6,14 +6,19 @@
       v-bind:style="editorStyle">
     </div>
     <button @click='getEditor'>打印Editor信息</button>
+    <OutputPanel :editor='editor'></OutputPanel>
   </div>
 </template>
 
 <script>
 /* eslint-disable */
 import * as monaco from 'monaco-editor'
+import OutputPanel from '../../OutputPanel/index.js'
 export default {
   name: "IdeEditor",
+  components: {
+    OutputPanel: OutputPanel,
+  },
   props: {
     value: String,
     theme: {
@@ -39,10 +44,9 @@ export default {
     }
 
   },
-  components: {
-  },
-  data: function() {
+  data() {
     return {
+      editor: {},
       editorStyle: {
         width: this.width,
         height: this.height

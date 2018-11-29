@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <IdeEditor
-      value='import turtle from turtle'
+      value='import turtle'
     ></IdeEditor>
     <IdeEditor
       value='print(12345)'

@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "monaco-editor": "^0.15.6",
+    "skulpt": "^0.11.1",
     "vue": "^2.5.17"
   },
   "devDependencies": {
