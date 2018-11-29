@@ -1,13 +1,18 @@
 <template>
   <div class="editor-container">
-    <ToolBar></ToolBar>
-    <div
-      class="editor"
-      ref="editor"
-      v-bind:style="editorStyle">
-    </div>
-    <button @click='getEditor'>打印Editor信息</button>
-    <OutputPanel :editor='editor'></OutputPanel>
+    <el-row type="flex" class="row-bg" justify="space-between">
+      <el-col :span="6">
+        <ToolBar></ToolBar>
+        <div
+          class="editor"
+          ref="editor"
+          v-bind:style="editorStyle">
+        </div>
+      </el-col>
+      <el-col :span="6">
+        <OutputPanel :editor='editor'></OutputPanel>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -143,10 +148,6 @@ export default {
       this.editor.onMouseLeave(event => this.$emit('mouseLeave', event))
       this.editor.onMouseMove(event => this.$emit('mouseMove', event))
       this.editor.onMouseUp(event => this.$emit('mouseUp', event))
-    },
-
-    getEditor() {
-      console.log(this.editor)
     },
 
     focus() {

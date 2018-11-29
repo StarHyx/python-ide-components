@@ -17,7 +17,7 @@ export default {
 
 <style>
 .toolbar-item {
-  margin-right: 100px;
+  margin-right: 40px;
   font-size: 30px;
   margin-bottom: 20px;
 }

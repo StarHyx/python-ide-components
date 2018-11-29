@@ -1,8 +1,11 @@
 <template>
 <div class="output">
+		<el-row>
+			<i class="el-icon-info output-btn" @click='getEditor'></i>
+			<i class="el-icon-caret-right output-btn" @click='run(editor)'></i>
+		</el-row>
     <div id="textOutput">{{textOutput}}</div>
     <div id="graphOutput" ></div>
-    <i icon="el-icon-caret-right" @click='run(editor)'></i>
 </div>
 </template>
 
@@ -48,10 +51,17 @@ export default {
 					console.log(err.toString());
 				}
 			);
+		},
+		getEditor() {
+			console.log(this.editor);
 		}
 	}
 };
 </script>
 
-<style>
+<style scoped>
+.output-btn {
+	font-size: 30px;
+	margin-right: 40px;
+}
 </style>
