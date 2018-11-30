@@ -4,6 +4,7 @@ import IdeEditor from "./../packages/index";
 import Element from "element-ui";
 import "./../packages/style/element-variables.scss";
 
+// 全局引入element
 Vue.use(Element);
 
 Vue.use(IdeEditor);
